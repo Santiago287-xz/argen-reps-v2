@@ -107,7 +107,7 @@ const Sidebar = () => {
         },
       ],
       icon: BsBagFill,
-    },    
+    },
 
     {
       name: "Aduana",
@@ -167,65 +167,65 @@ const Sidebar = () => {
         animate={open ? "open" : "closed"}
         className="bg-[#101418] text-gray shadow-xl z-[999] max-w-[16rem] w-[16rem] overflow-hidden md:relative fixed h-screen"
       >
-        <div className="flex items-center gap-2.5 font-medium border-b py-3 border-slate-300 mx-3">
-          <BsBagCheckFill size={25} className="min-w-max" />
-          <span className="text-xl whitespace-pre">ArgenReps</span>
-        </div>
-
-        <div className="flex flex-col  h-full">
-          <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 font-medium overflow-x-hidden scrollbar-thin scrollbar-thumb-slate-800 md:h-[68%] h-[70%]">
-            <li>
-              <NavLink to={"/"} className="link">
-                <BsFillHouseHeartFill size={23} className="min-w-max" />
-                Bienvenidos
-              </NavLink>
-            </li>
-            <div className="flex items-center gap-4 p-[0.625rem] justify-between">
-              <small className="font-semibold text-green-500 text-sm">
-                Guia de compra
-              </small>
-              <IoIosArrowDown className="text-green-500 mr-16" />
-            </div>
-
-            {(open || isTabletMid) && (
-              <div>
-                {subMenusList?.map((menu) => (
-                  <div key={menu.name} className="flex flex-col gap-1">
-                    <SubMenu data={menu} />
-                  </div>
-                ))}
+        <div className="flex flex-col justify-between h-full">
+          <main className="h-full relative">
+            <ul className="absolute whitespace-pre text-[0.9rem] flex flex-col gap-1 font-medium overflow-x-hidden scrollbar-thin scrollbar-thumb-slate-800 h-full w-full p-2">
+              <header className="flex items-center gap-2.5 font-medium border-b py-3 border-slate-300 mx-3">
+                <BsBagCheckFill size={25} className="min-w-max" />
+                <span className="text-xl whitespace-pre">ArgenReps</span>
+              </header>
+              <li>
+                <NavLink to={"/"} className="link">
+                  <BsFillHouseHeartFill size={23} className="min-w-max" />
+                  Bienvenidos
+                </NavLink>
+              </li>
+              <div className="flex items-center gap-4 p-[0.625rem] justify-between">
+                <small className="font-semibold text-green-500 text-sm">
+                  Guia de compra
+                </small>
+                <IoIosArrowDown className="text-green-500 mr-16" />
               </div>
-            )}
-            <div className="flex items-center gap-4 p-[0.625rem] pb-0  justify-between">
-              <small className="text-green-500 font-semibold  text-sm">
-                Spreedsheet
-              </small>
-              <IoIosArrowDown className="text-green-500 mr-16" />
-            </div>
-            <li className="pt-2.5">
-              <NavLink to={"/productos"} className="link">
-                <BsTag size={23} className="min-w-max" />
-                Productos
-              </NavLink>
-            </li>
-          </ul>
-          {open && (
-            <div className="flex flex-wrap content-end text-sm z-50 w-full font-medium">
-              <div className="flex border-y border-slate-300 p-4 items-center justify-between">
+
+              {(open || isTabletMid) && (
                 <div>
-                  <p className="text-sm/[5px]">Registrate en CssBuy</p>
+                  {subMenusList?.map((menu) => (
+                    <div key={menu.name} className="flex flex-col gap-1">
+                      <SubMenu data={menu} />
+                    </div>
+                  ))}
+                </div>
+              )}
+              <div className="flex items-center gap-4 p-[0.625rem] pb-0  justify-between">
+                <small className="text-green-500 font-semibold  text-sm">
+                  Spreedsheet
+                </small>
+                <IoIosArrowDown className="text-green-500 mr-16" />
+              </div>
+              <li className="pt-2.5">
+                <NavLink to={"/productos"} className="link">
+                  <BsTag size={23} className="min-w-max" />
+                  Productos
+                </NavLink>
+              </li>
+            </ul>
+          </main>
+          {open && (
+            <footer className="flex flex-wrap content-end text-sm z-50 w-full font-medium">
+              <div className="flex gap-[.3rem] border-y border-slate-300 p-4 items-center justify-between">
+                <div>
+                  <p className="text-sm/[15px]">Registrate en CssBuy</p>
                   <small>Tenes 3 descuentos</small>
                 </div>
                 <a
+                  className="text-teal-500 py-1.5 px-3 text-xs bg-teal-50 rounded-xl"
                   href="https://www.cssbuy.com/toctoc/MjMxMDA1MDkyNDU4MA=="
                   target="_blank"
                 >
-                  <p className="text-teal-500 py-1.5 px-3 text-xs bg-teal-50 rounded-xl">
-                    Crear
-                  </p>
+                  Crear
                 </a>
               </div>
-            </div>
+            </footer>
           )}
         </div>
       </motion.div>

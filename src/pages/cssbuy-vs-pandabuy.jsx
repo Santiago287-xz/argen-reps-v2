@@ -1,8 +1,8 @@
-import React from "react";
+import CategoryLayout from "../layouts/categoryLayout";
 
 export default function CssBuyVsPandaBuy() {
   return (
-    <>
+    <CategoryLayout>
       <h1>Que es CssBuy</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
@@ -10,6 +10,6 @@ export default function CssBuyVsPandaBuy() {
         animi, velit non, delectus adipisci dignissimos vero ex vel numquam
         libero quo?
       </p>
-    </>
+    </CategoryLayout>
   );
 }

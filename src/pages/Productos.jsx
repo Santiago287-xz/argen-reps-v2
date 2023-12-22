@@ -1,11 +1,7 @@
 import CatalogProduct from "../components/catalog-products";
 
 const Productos = () => {
-  return (
-    <>      
-      <CatalogProduct />
-    </>
-  );
+  return <CatalogProduct />;
 };
 
 export default Productos;
