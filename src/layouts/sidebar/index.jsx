@@ -127,29 +127,6 @@ const Sidebar = () => {
       ],
       icon: BsPostageFill,
     },
-
-    {
-      name: "Preguntas",
-      categorys: [
-        {
-          title: "Pregunta 1",
-          url: "pregunta-1",
-        },
-        {
-          title: "Pregunta 2",
-          url: "pregunta-1",
-        },
-        {
-          title: "Pregunta 3",
-          url: "pregunta-1",
-        },
-        {
-          title: "Pregunta 4",
-          url: "pregunta-1",
-        },
-      ],
-      icon: BsFillQuestionCircleFill,
-    },
   ];
 
   return (
@@ -187,15 +164,23 @@ const Sidebar = () => {
                 <IoIosArrowDown className="text-green-500 mr-16" />
               </div>
 
-              {(open || isTabletMid) && (
-                <div>
-                  {subMenusList?.map((menu) => (
-                    <div key={menu.name} className="flex flex-col gap-1">
-                      <SubMenu data={menu} />
-                    </div>
-                  ))}
+              <div>
+                {(open || isTabletMid) && (
+                  <>
+                    {subMenusList?.map((menu) => (
+                      <div key={menu.name} className="flex flex-col gap-1">
+                        <SubMenu data={menu} />
+                      </div>
+                    ))}
+                  </>
+                )}
+                <div className="flex flex-col gap-1">
+                  <NavLink to={"/Preguntas"} className="link">
+                    <BsFillQuestionCircleFill size={24} className="min-w-max" />
+                    Preguntas
+                  </NavLink>
                 </div>
-              )}
+              </div>
               <div className="flex items-center gap-4 p-[0.625rem] pb-0  justify-between">
                 <small className="text-green-500 font-semibold  text-sm">
                   Spreedsheet
@@ -204,7 +189,7 @@ const Sidebar = () => {
               </div>
               <li className="pt-2.5">
                 <NavLink to={"/productos"} className="link">
-                  <BsTag size={23} className="min-w-max" />
+                  <BsTag size={24} className="min-w-max" />
                   Productos
                 </NavLink>
               </li>

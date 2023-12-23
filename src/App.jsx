@@ -7,7 +7,7 @@ import CssBuyVsPandaBuy from "./pages/cssbuy-vs-pandabuy";
 import ExpertBuy from "./pages/expert-buy";
 import Paso1 from "./pages/paso-1";
 import Paso2 from "./pages/paso-2";
-import Pregunta1 from "./pages/pregunta-1";
+import Pregunta from "./pages/pregunta";
 import Productos from "./pages/Productos";
 import QueEsCssBuy from "./pages/que-es-cssbuy";
 import QueNecesito from "./pages/que-necesito";
@@ -24,7 +24,7 @@ export default function App() {
         <Route path="/expert-buy" element={<ExpertBuy />} />
         <Route path="/paso-1" element={<Paso1 />} />
         <Route path="/paso-2" element={<Paso2 />} />
-        <Route path="/pregunta-1" element={<Pregunta1 />} />
+        <Route path="/preguntas" element={<Pregunta />} />
         <Route path="/productos" element={<Productos />} />
         <Route path="/que-es-cssbuy" element={<QueEsCssBuy />} />
         <Route path="/que-necesito" element={<QueNecesito />} />

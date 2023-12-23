@@ -1,8 +1,17 @@
+@import "keep-react/css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Play:wght@700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .font-Montserrat {
+    /* Define your font styles here */
+    font-family: 'Montserrat', sans-serif;
+    /* Add more styles if needed */
+  }
+}
 
 @layer base {
   html {

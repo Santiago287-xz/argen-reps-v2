@@ -1,6 +1,7 @@
+import keepPreset from "keep-react/preset";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}","node_modules/keep-react/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontSize: {
       sm1: '0.8rem',
@@ -18,5 +19,6 @@ module.exports = {
       },
     },
   },
+  presets: [keepPreset],
   plugins: [require("tailwind-scrollbar")],
 };
